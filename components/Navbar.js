@@ -4,22 +4,24 @@ import { useOnClickOutside } from '../lib/useOnClickOutside';
 
 export default function Navbar({ data, category }) {
   const [open, setOpen] = useState(false);
-  const color = category === 'design' ? 'pink' : '';
+  const color = category === 'design' ? 'pink' : category === 'illustration' ? 'red' : 'blue';
   const ref = useRef(null);
+  console.log(category);
   const { links } = data;
+
   // TODO: Fix the bug this adds when trying to close hamburger menu
   // useOnClickOutside(ref, () => setOpen(false));
   return (
     <header className="py-4 px-4 flex flex-row flex-wrap justify-between relative border-gray border-b-2 md:border-b-4 md:x-20 md:py-10 md:items-center md:space-x-4">
       <Link href={'/'}>
-        <a className="text-2xl md:text-6xl font-gopher font-bold self-center">
+        <a className="text-lg md:text-6xl font-gopher font-bold self-center">
           {/* conditionally show the shorter/longer name */}
           <span className="hidden md:block ">
             brooke metropulos {category ? '| ' : ''}
             <span className={`text-${color}`}>{category ? `${category}.` : ''}</span>
           </span>
           <span className="md:hidden">
-            b. metropulos {category ? '| ' : ''}
+            brooke metropulos {category ? '| ' : ''}
             <span className={`text-${color}`}>{category ? `${category}.` : ''}</span>
           </span>
         </a>

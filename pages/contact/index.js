@@ -4,7 +4,6 @@ import Layout from '../../components/Layout';
 import { baseUrl, fetchQuery } from '../../lib/fetchQuery';
 
 export default function Contact({ globalData, pageData }) {
-  console.log(pageData);
   return (
     <Layout data={globalData}>
       <section>

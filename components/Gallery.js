@@ -8,7 +8,12 @@ export function Gallery({ projectPages }) {
       {projectPages &&
         projectPages.map((project) => {
           return (
-            <Link href={`/${project.category}/${project.id}`} key={project.id} className="border-2 border-gray p-3">
+            <Link
+              as={`/${project.category}/${project.slug}`}
+              href={'[category]/[slug]'}
+              key={project.id}
+              className="border-2 border-gray p-3"
+            >
               <a>
                 <Image src={`${baseUrl}${project.image.url}`} width={687} height={657} />
               </a>
