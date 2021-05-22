@@ -31,9 +31,15 @@ export default function ContactForm() {
           className="shadow appearance-none border border-gray w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="message"
           rows="4"
-          placeholder="Hey Brooke, I'd like to hire you."
+          placeholder="Hey Brooke, I love your work 😎 "
         />
       </div>
+      <button
+        className="border border-gray hover:bg-pink hover:text-white text-gray w-full py-2 px-4 focus:outline-none focus:shadow-outline"
+        type="submit"
+      >
+        Send me a message !
+      </button>
     </form>
   );
 }
