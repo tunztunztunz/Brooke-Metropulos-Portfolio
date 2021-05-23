@@ -5,7 +5,7 @@ export default function Footer({ data }) {
   return (
     <footer className="py-4 px-4 flex justify-between pin-b">
       <span className="font-gopher font-bold">{copyright}</span>
-      <span className="space-x-6">
+      <span className="space-x-2 md:space-x-6">
         {links &&
           links.map((link) => (
             <Link href={link.url} key={link.id}>
