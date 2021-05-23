@@ -1,5 +1,10 @@
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: {
+    content: ['./pages/**/*.js', './components/**/*.js'],
+    options: {
+      safelist: ['text-pink', 'text-red', 'text-blue'],
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
