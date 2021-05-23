@@ -5,7 +5,6 @@ import { baseUrl, fetchQuery } from '../lib/fetchQuery';
 
 export default function Home({ globalData, pageData }) {
   const { buttons } = pageData;
-  console.log(buttons);
   return (
     <Layout data={globalData}>
       <section className="flex flex-wrap items-start justify-evenly h-full">

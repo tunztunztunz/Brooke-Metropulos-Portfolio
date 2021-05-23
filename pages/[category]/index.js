@@ -27,7 +27,6 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  await console.log('fuckl!!');
   const projects = await fetchQuery('project-pages');
   const paths = projects.map((project) => {
     return {
