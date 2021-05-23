@@ -12,9 +12,9 @@ export default function Navbar({ data, category }) {
   // TODO: Fix the bug this adds when trying to close hamburger menu
   // useOnClickOutside(ref, () => setOpen(false));
   return (
-    <header className="py-4 px-4 flex flex-row flex-wrap justify-between relative border-gray border-b-2 md:border-b-4 md:x-20 md:py-10 md:items-center md:space-x-4">
+    <header className="py-4 px-4 flex flex-row flex-wrap justify-between relative border-gray border-b-2 md:border-b-4 md:px-12 md:pt-12 md:pb-6 md:items-center md:flex-col xl:flex-row xl:flex-nowrap xl:pt-6">
       <Link href={'/'}>
-        <a className="text-lg md:text-6xl font-gopher font-bold self-center">
+        <a className="text-lg font-gopher font-bold self-center md:text-4xl  md:mr-auto xl:text-4xl 2xl:text-5xl 3xl:text-6xl">
           {/* conditionally show the shorter/longer name */}
           <span className="hidden md:block ">
             brooke metropulos {category ? '| ' : ''}
@@ -39,17 +39,17 @@ export default function Navbar({ data, category }) {
         ref={ref}
         className={`${
           open === true ? 'flex' : 'hidden'
-        } bg-white absolute w-full top-16 left-0 p-6 border-gray border-b-2 z-20 uppercase gap-y-4 md:flex md:gap-x-4 md:text-2xl  flex-col md:relative  md:top-0 md:flex-row md:space-x-6  md:w-auto md:bg-transparent md:p-0`}
+        } flex-col bg-white absolute w-full top-16 left-0 p-6 border-gray border-b-2 z-20 uppercase gap-y-4 md:border-0 md:flex md:text-2xl md:relative md:top-2 md:flex-row md:bg-transparent md:p-0 xl:w-max xl:top-0`}
       >
         {links &&
           links.map((link, index) => (
             <React.Fragment key={link.id}>
               <Link href={link.url}>
-                <a>
-                  <span className="text-lg">{link.text}</span>
+                <a className="md:mr-4">
+                  <span className="text-lg md:text-xl xl:text-base 2xl:text-xl 3xl:text-2xl">{link.text}</span>
                 </a>
               </Link>
-              {index === links.length - 1 ? '' : <span className="hidden md:inline-block">|</span>}
+              {index === links.length - 1 ? '' : <span className="hidden md:block md:mr-4">|</span>}
             </React.Fragment>
           ))}
       </nav>
