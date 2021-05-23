@@ -23,7 +23,7 @@ export default function Home({ globalData, pageData }) {
                   >
                     {button.links.text}
                   </h2>
-                  <Image src={`${baseUrl}${button.svg.url}`} width={1065} height={600} />
+                  <Image src={`${button.svg.url}`} width={1065} height={600} />
                 </a>
               </Link>
             );

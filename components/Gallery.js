@@ -11,7 +11,7 @@ export function Gallery({ projectPages }) {
             <Link as={`/${project.category}/${project.slug}`} href={'[category]/[slug]'} key={project.id}>
               <a>
                 <div className="border-2 border-gray pt-3 pr-3 pl-3 pb-2">
-                  <Image src={`${baseUrl}${project.image.url}`} width={687} height={657} />
+                  <Image src={`${project.image.url}`} width={687} height={657} />
                 </div>
               </a>
             </Link>

@@ -8,7 +8,7 @@ export default function Contact({ globalData, pageData }) {
     <Layout data={globalData}>
       <section className="flex flex-col xl:flex-row place-content-around">
         <div className="mx-auto md:w-7/12 xl:w-2/5 xl:-ml-0 xl:-mr-0">
-          <Image src={`${baseUrl}${pageData.image.url}`} width={687} height={657} />
+          <Image src={`${pageData.image.url}`} width={687} height={657} />
         </div>
         <section className="xl:w-2/5">
           <header>
