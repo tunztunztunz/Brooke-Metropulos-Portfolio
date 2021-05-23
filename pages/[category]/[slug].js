@@ -16,7 +16,7 @@ export default function Project({ singleProject, globalData }) {
           <ReactMarkdown className="hidden xl:block">{project.description}</ReactMarkdown>
         </section>
         <div className="mb-2 xl:w-2/5">
-          <Image src={`${project?.image?.url}`} width={616} height={616} alt="picture of the project" />
+          <Image src={`${project.image.url}`} width={616} height={616} alt="picture of the project" />
         </div>
         <ReactMarkdown className="xl:hidden">{project.description}</ReactMarkdown>
       </section>

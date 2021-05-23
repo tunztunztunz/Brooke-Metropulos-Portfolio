@@ -6,7 +6,6 @@ export default function Navbar({ data, category }) {
   const [open, setOpen] = useState(false);
   const color = category === 'design' ? 'pink' : category === 'illustration' ? 'red' : 'blue';
   const ref = useRef(null);
-  console.log(category);
   const { links } = data;
 
   // TODO: Fix the bug this adds when trying to close hamburger menu

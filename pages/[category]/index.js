@@ -7,7 +7,6 @@ export default function DesignIndex({ globalData, pageData }) {
   const router = useRouter();
   const { category } = router.query;
   const projects = pageData.filter((project) => project.category === category);
-  console.log(category);
   return (
     <Layout data={globalData} category={category}>
       <Gallery projectPages={projects} />
@@ -28,6 +27,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
+  await console.log('fuckl!!');
   const projects = await fetchQuery('project-pages');
   const paths = projects.map((project) => {
     return {

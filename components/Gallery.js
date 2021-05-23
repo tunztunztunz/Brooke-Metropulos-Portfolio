@@ -7,6 +7,7 @@ export function Gallery({ projectPages }) {
     <section className="grid gap-y-6 lg:grid-cols-2 lg:gap-y-8 lg:gap-x-8 xl:grid-cols-3 xl:mr-0">
       {projectPages &&
         projectPages.map((project) => {
+          console.log(project.image.url);
           return (
             <Link as={`/${project.category}/${project.slug}`} href={'[category]/[slug]'} key={project.id}>
               <a>
