@@ -15,7 +15,7 @@ export default function Navbar({ data, category }) {
       <Link href={'/'}>
         <a className="text-lg font-gopher font-bold self-center md:text-4xl  md:mr-auto xl:text-4xl 2xl:text-5xl 3xl:text-6xl">
           {/* conditionally show the shorter/longer name */}
-          <span className="hidden md:block ">
+          <span className="hidden md:block">
             brooke metropulos {category ? '| ' : ''}
             <span className={`text-${color}`}>{category ? `${category}.` : ''}</span>
           </span>
