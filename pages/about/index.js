@@ -16,7 +16,7 @@ export default function About({ globalData, pageData }) {
             src={`${pageData.image.url}`}
             width={644}
             height={976}
-            sizes="(max-width: 600px) 100vw, (max-width: 1023px) 53vw, 23vw"
+            sizes="(max-width: 600px) 50vw, (max-width: 1023px) 53vw, 45vw"
           />
         </div>
       </section>

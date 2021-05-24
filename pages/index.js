@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { baseUrl, fetchQuery } from '../lib/fetchQuery';
+import findUrl from '../lib/findUrl';
 
 export default function Home({ globalData, pageData }) {
   const { buttons } = pageData;
@@ -10,6 +11,7 @@ export default function Home({ globalData, pageData }) {
       <section className="flex flex-wrap items-start justify-evenly h-full">
         {buttons &&
           buttons.map((button, index) => {
+            const url = findUrl(button.svg.url);
             const textColor = `text-${button.textColor}`;
             return (
               <Link as={`${button.links.url}`} href="/[category]" key={button.id}>
@@ -23,7 +25,7 @@ export default function Home({ globalData, pageData }) {
                   >
                     {button.links.text}
                   </h2>
-                  <Image src={`${button.svg.url}`} width={1065} height={600} />
+                  <Image src={url} width={1065} height={600} />
                 </a>
               </Link>
             );
