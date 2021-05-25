@@ -1,4 +1,4 @@
-import { Image, Transformation } from 'cloudinary-react';
+import { Image, Placeholder } from 'cloudinary-react';
 import ReactMarkdown from 'react-markdown';
 import Layout from '../../components/Layout';
 import { fetchQuery } from '../../lib/fetchQuery';
@@ -27,7 +27,9 @@ export default function Project({ singleProject, globalData }) {
             crop="scale"
             responsiveUseBreakpoints="true"
             format="webp"
-          ></Image>
+          >
+            <Placeholder type="pixelate" />
+          </Image>
         </div>
         <ReactMarkdown className="xl:hidden">{project.description}</ReactMarkdown>
       </section>
