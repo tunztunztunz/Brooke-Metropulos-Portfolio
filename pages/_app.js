@@ -5,7 +5,7 @@ import '../styles/styles.css';
 function MyApp({ Component, pageProps }) {
   return (
     <CloudinaryContext cloudName="ddiaabzu0">
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </CloudinaryContext>
   );
 }

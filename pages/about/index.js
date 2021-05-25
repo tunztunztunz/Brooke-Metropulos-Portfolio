@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout';
 import Image from 'next/image';
-import { baseUrl, fetchQuery } from '../../lib/fetchQuery';
+import { fetchQuery } from '../../lib/fetchQuery';
 import ReactMarkdown from 'react-markdown';
 
 export default function About({ globalData, pageData }) {
