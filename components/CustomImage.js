@@ -25,7 +25,7 @@ export default function CustomImage({
       style={{
         position: 'relative',
         height: 0,
-        paddingTop: `${(width / height) * 230}%`,
+        paddingTop: `${(width / height) * 100}%`,
         backgroundImage: `url(${cloudUrl})`,
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
