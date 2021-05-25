@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout';
-import Image from 'next/image';
+import CustomImage from '../../components/CustomImage';
 import { fetchQuery } from '../../lib/fetchQuery';
 import ReactMarkdown from 'react-markdown';
 
@@ -11,12 +11,14 @@ export default function About({ globalData, pageData }) {
           <h1 className="text-2xl md:text-4xl md:mb-8 3xl:text-5xl">About</h1>
           <ReactMarkdown>{pageData.text}</ReactMarkdown>
         </div>
-        <div className=" absolute w-7/12 right-2 md:right-12 xl:w-2/5 xl:relative xl:right-10">
-          <Image
-            src={`${pageData.image.url}`}
+        <div className=" absolute w-7/12 right-2 md:right-12 xl:w-4/12 xl:relative xl:right-10">
+          <CustomImage
+            url={pageData.image.url}
             width={644}
             height={976}
+            effect="blur:1000"
             sizes="(max-width: 600px) 50vw, (max-width: 1023px) 53vw, 45vw"
+            bgHeight={230}
           />
         </div>
       </section>

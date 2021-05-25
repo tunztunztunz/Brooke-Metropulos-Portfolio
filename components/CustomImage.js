@@ -6,6 +6,7 @@ export default function CustomImage({
   url,
   width = null,
   height = null,
+  bgHeight = 100,
   effect = 'pixelate',
   sizes = '',
 }) {
@@ -20,12 +21,13 @@ export default function CustomImage({
       quality: 1,
     },
   });
+
   return (
     <div
       style={{
         position: 'relative',
         height: 0,
-        paddingTop: `${(width / height) * 100}%`,
+        paddingTop: `${(width / height) * bgHeight}%`,
         backgroundImage: `url(${cloudUrl})`,
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
