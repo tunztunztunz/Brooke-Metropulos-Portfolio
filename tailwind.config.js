@@ -1,5 +1,4 @@
 module.exports = {
-  // mode: 'jit',
   purge: {
     content: ['./pages/**/*.js', './components/**/*.js'],
     options: {
