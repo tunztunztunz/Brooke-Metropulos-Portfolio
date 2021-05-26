@@ -27,11 +27,7 @@ export default function CustomImage({
       style={{
         position: 'relative',
         height: 0,
-<<<<<<< HEAD
         paddingTop: `${(width / height) * bgHeight}%`,
-=======
-        paddingTop: `${(width / height) * 230}%`,
->>>>>>> parent of 77edc3c (fix background height on CustomImage)
         backgroundImage: `url(${cloudUrl})`,
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
