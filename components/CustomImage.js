@@ -17,7 +17,7 @@ export default function CustomImage({
       cloudName: 'ddiaabzu0',
     },
     transformations: {
-      effect: { effect },
+      effect: effect,
       quality: 1,
     },
   });

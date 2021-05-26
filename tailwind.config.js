@@ -1,7 +1,7 @@
 module.exports = {
-  // mode: 'jit',
+  mode: 'jit',
   purge: {
-    content: ['./pages/**/*.js', './components/**/*.js'],
+    content: ['./pages/**/*.js', './components/**/*.js', './safelist.txt'],
     options: {
       safelist: ['text-pink', 'text-red', 'text-blue'],
     },

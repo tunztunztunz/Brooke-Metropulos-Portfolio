@@ -1,0 +1,1 @@
+text-pink text-red text-blue
