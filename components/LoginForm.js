@@ -1,28 +1,42 @@
 import axios from 'axios';
+import { useState } from 'react';
+import { setCookie } from 'nookies';
+import Router from 'next/router';
 
-export default function LoginForm() {
-  const login = (e) => {
+export default function LoginForm({ setEmail, email, setPassword, password }) {
+  const [error, setError] = useState('');
+
+  const login = async (e) => {
     e.preventDefault();
-    console.log('hi');
-    axios
-      .post('https://thawing-escarpment-59373.herokuapp.com/auth/local', {
-        identifier: 'dustinsimensen@gmail.com',
-        password: 'Sublime1989',
+    const login = await axios
+      .post('http://localhost:1337/auth/local', {
+        identifier: email,
+        password: password,
       })
       .then((response) => {
         // Handle success.
-        console.log('Well done!');
-        console.log('User profile', response.data.user);
-        console.log('User token', response.data.jwt);
+        console.log('Logged in!');
+        setError('');
+        return response;
       })
       .catch((error) => {
         // Handle error.
         console.log('An error occurred:', error.response);
+        setError('Error: incorrect credentials');
       });
+
+    const loginResponse = await login;
+
+    setCookie(null, 'jwt', loginResponse.data.jwt, {
+      maxAge: 30 * 24 * 60 * 60,
+      path: '/',
+    });
+    Router.push('/dashboard');
   };
 
   return (
     <form onSubmit={(e) => login(e)}>
+      {error && <h2 className=" text-base text-red mb-4">{error}</h2>}
       <div className="mb-4">
         <label className="block text-gray text-sm text mb-2 md:text-lg" htmlFor="email">
           Email
@@ -32,6 +46,7 @@ export default function LoginForm() {
           id="email"
           type="email"
           placeholder="JaneDoe@example.com"
+          onChange={(e) => setEmail(e.target.value)}
         />
       </div>
       <div className="mb-4">
@@ -43,6 +58,7 @@ export default function LoginForm() {
           id="password"
           type="password"
           placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
         />
       </div>
       <button

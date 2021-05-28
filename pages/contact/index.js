@@ -14,7 +14,8 @@ export default function Contact({ globalData, pageData }) {
             url={pageData.image.url}
             width={698}
             height={666}
-            effect={'blur:1000'}
+            bgHeight={91}
+            effect={'blur:500'}
             sizes="(max-width: 600px) 90vw, (max-width: 1200px) 33vw, 33vw"
           />
         </div>

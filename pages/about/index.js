@@ -16,7 +16,7 @@ export default function About({ globalData, pageData }) {
             url={pageData.image.url}
             width={644}
             height={976}
-            effect="blur:1000"
+            effect="blur:500"
             sizes="(max-width: 600px) 50vw, (max-width: 1023px) 53vw, 45vw"
             bgHeight={230}
           />
