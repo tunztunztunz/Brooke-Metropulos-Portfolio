@@ -5,11 +5,11 @@ import Router from 'next/router';
 
 export default function LoginForm({ setEmail, email, setPassword, password }) {
   const [error, setError] = useState('');
-
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const login = async (e) => {
     e.preventDefault();
     const login = await axios
-      .post('http://localhost:1337/auth/local', {
+      .post(`${baseUrl}/auth/local`, {
         identifier: email,
         password: password,
       })
@@ -31,7 +31,7 @@ export default function LoginForm({ setEmail, email, setPassword, password }) {
       maxAge: 30 * 24 * 60 * 60,
       path: '/',
     });
-    Router.push('/dashboard');
+    Router.push('https://thawing-escarpment-59373.herokuapp.com/admin');
   };
 
   return (
