@@ -11,6 +11,31 @@ module.exports = {
         source: '/',
         destination: "https://www.bmetropulos.com/",
         permanent: false
+      },
+      {
+        source: '/contact',
+        destination: "https://www.bmetropulos.com/",
+        permanent: false
+      },
+      {
+        source: '/about',
+        destination: "https://www.bmetropulos.com/",
+        permanent: false
+      },
+      {
+        source: '/illustration',
+        destination: "https://www.bmetropulos.com/",
+        permanent: false
+      },
+      {
+        source: '/animation',
+        destination: "https://www.bmetropulos.com/",
+        permanent: false
+      },
+      {
+        source: '/design',
+        destination: "https://www.bmetropulos.com/",
+        permanent: false
       }
     ]
   }

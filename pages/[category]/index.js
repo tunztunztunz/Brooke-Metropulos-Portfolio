@@ -9,7 +9,7 @@ export default function DesignIndex({ globalData, pageData }) {
   const projects = pageData.filter((project) => project.category === category);
   return (
     <Layout data={globalData} category={category}>
-      <Gallery projectPages={projects} />
+      {/* <Gallery projectPages={projects} /> */}
     </Layout>
   );
 }
